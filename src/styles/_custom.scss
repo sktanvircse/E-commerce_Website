@@ -245,3 +245,219 @@
       }
   }
 }
+
+//FeaturedProducts CSS
+.featuredProducts {
+  margin: 100px 200px;
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    h1 {
+      flex: 2;
+      text-transform: capitalize;
+    }
+
+    p{
+      flex:3;
+      color:gray
+    }
+  }
+
+  .bottom{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+}
+
+//Footer CSS
+.footer{
+  margin: 100px 200px 20px 200px;
+  .top{
+      display: flex;
+      gap: 50px;
+      .item{
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          text-align: justify;
+          font-size: 14px;
+          h1{
+              font-size: 18px;
+              font-weight: 500;
+              color: #555;
+          }
+          span{
+              color: gray;
+          }
+      }
+  }
+  .bottom{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 50px;
+      .left{
+          display: flex;
+          align-items: center;
+          .logo{
+              color: #2879fe;
+              font-weight: bold;
+              font-size: 24px;
+          }
+          .copyright{
+              margin-left: 20px;
+              font-size: 12px;
+              color: gray;
+          }
+      }
+      .right{
+          img{
+              height: 50px;
+          }
+      }
+  }
+}
+
+//Navbar CSS
+.navbar{
+  height: 80px;
+  .wrapper{
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .item{
+          display: flex;
+          align-items: center;
+          font-size: 18px;
+      }
+      .left{
+          display: flex;
+          align-items: center;
+          gap: 25px;
+      }
+      .center{
+          font-size: 30px;
+          letter-spacing: 2px;
+      }
+      .right{
+          display: flex;
+          align-items: center;
+          gap: 25px;
+
+          .icons{
+              display: flex;
+              gap: 15px;
+              color: #777;
+              cursor: pointer;
+          }
+          .cartIcon{
+              position: relative;
+
+              span{
+                  font-size: 12px;
+                  width: 20px;
+                  height: 20px;
+                  border-radius: 50%;
+                  background-color: #2879fe;
+                  color: white;
+                  position: absolute;
+                  right: -10px;
+                  top: -10px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+              }
+          }
+      }
+  }
+}
+
+.list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+//Slider CSS
+.slider{
+  height: calc(100vh - 80px);
+  // width: 100vw;
+  position: relative;
+  overflow: hidden;
+  
+  .container{
+    width: 300vw;
+    height: 100vh;
+    display: flex;
+    transition: all 1s ease;
+    margin: 0;
+    img{
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .icons{
+    width: fit-content;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    gap: 10px;
+    margin: auto;
+
+    .icon{
+      width: 50px;
+      height: 50px;
+      border: 1px solid #999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+}
+
+//products CSS
+.products{
+  padding: 30px 50px;
+  display: flex;
+  .left{
+      flex: 1;
+      position: sticky;
+      height: 100%;
+      top: 50px;
+      .filterItem{
+          margin-bottom: 30px;
+          h2{
+              font-weight: 400;
+              margin-bottom: 20px;
+          }
+          .inputItem{
+              margin-bottom: 10px;
+              label{
+                  margin-left: 10px;
+              }
+          }
+      }
+  }
+  .right{
+      flex: 3;
+  }
+  .catImg{
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      margin-bottom: 50px;
+  }
+}

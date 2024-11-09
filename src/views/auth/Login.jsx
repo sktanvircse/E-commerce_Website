@@ -15,7 +15,7 @@ const Login = () => {
     startTransition(() => {
       // Simulate some async login logic if needed
       setTimeout(() => {
-        navigate("/dashboard");
+        navigate("/home");
       }, 500); // Simulated delay, can be replaced with actual logic (like an API call)
     });
   }
