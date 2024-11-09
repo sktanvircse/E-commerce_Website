@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from "./configs/Layout";
 
-const FirstPage = lazy(() => import("./views/pages/index"));
+const Login = lazy(() => import("./views/auth/Login"));
 
 
 export default class AppRouter extends Component {
@@ -12,9 +12,9 @@ export default class AppRouter extends Component {
             <>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="" element={<Navigate to="/index" />} />
-                        <Route path="/" element={<Navigate to="/index" />} />
-                       <Route path="/index" element={<FirstPage />} />
+                        <Route path="" element={<Navigate to="/login" />} />
+                        <Route path="/" element={<Navigate to="/login" />} />
+                       <Route path="/login" element={<Login />} />
                           {/*<Route element={<Layout />}>
                             <Route path="/dashboard" element={<Dashboard />} />
                         </Route> */}

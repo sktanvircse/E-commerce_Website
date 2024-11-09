@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
 import { Outlet } from "react-router-dom";
 
+import Navbar from '../views/partial/Navbar';
+import Footer from '../views/partial/Footer';
 
 const Layout = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleSidebar = () => {
-        setIsOpen(!isOpen);
-    };
     return (
         <>
             <div>
+                <Navbar />
                 <Outlet />
+                <Footer />
             </div>
         </>
     );
