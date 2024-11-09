@@ -8,7 +8,7 @@ import Cart from "../../components/pageComponent/Cart/Cart";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [cartItems, setCartItems] = useState(0); // Dynamic cart count
+  const [cartItems, setCartItems] = useState(5); // Dynamic cart count
 
   return (
     <nav className="navbar">
@@ -48,11 +48,11 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="navbar-icons">
-            <SearchIcon className="icon" />
-            <PersonOutlineOutlinedIcon className="icon" />
-            <FavoriteBorderOutlinedIcon className="icon" />
+            <SearchIcon  />
+            <PersonOutlineOutlinedIcon  />
+            <FavoriteBorderOutlinedIcon  />
             <div className="cart-icon" onClick={() => setOpen(!open)}>
-              <ShoppingCartOutlinedIcon className="icon" />
+              <ShoppingCartOutlinedIcon  />
               {cartItems > 0 && <span className="cart-count">{cartItems}</span>}
             </div>
           </div>
