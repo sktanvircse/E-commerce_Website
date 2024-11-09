@@ -1,22 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Card = ({item}) => {
+const Card = ({ item }) => {
     return (
-       <Link className='link' to={`/product/${item.id}`}>
+        <Link className='link' to={`/product/${item.id}`}>
             <div className='card'>
                 <div className='image'>
-                {item.isNew && <span>New Season</span>}
-                   <img src={item.img} alt=''  className='mainImg'/>
-                   <img src={item.img2} alt=''  className='secondImg'/>
+                    {item.isNew && <span className="new-badge">New Season</span>}
+                    <img src={item.img} alt='' className='mainImg'/>
+                    <img src={item.img2} alt='' className='secondImg'/>
                 </div>
-                <h2>{item.title}</h2>
+                <h2 className='title'>{item.title}</h2>
                 <div className='prices'>
-                   <h3>${item.oldPrice}</h3>
-                   <h3>${item.price}</h3>
+                    {item.oldPrice && <h3 className='old-price'>${item.oldPrice}</h3>}
+                    <h3 className='current-price'>${item.price}</h3>
                 </div>
             </div>
-       </Link>
+        </Link>
     );
 };
 
