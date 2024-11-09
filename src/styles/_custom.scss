@@ -411,46 +411,91 @@
 }
 
 //Slider CSS
-.slider{
-  height: calc(100vh - 80px);
-  // width: 100vw;
+/* Main Slider Container */
+.slider {
   position: relative;
+  width: 100vw;
+  height: 70vh;
   overflow: hidden;
-  
-  .container{
-    width: 300vw;
-    height: 100vh;
-    display: flex;
-    transition: all 1s ease;
-    margin: 0;
-    img{
-      width: 100vw;
-      height: 100%;
-      object-fit: cover;
-    }
+}
+
+/* Container for all slides */
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100vw;
+}
+
+/* Individual Slide Wrapper */
+.slide {
+  min-width: 100vw; /* Each slide takes the full width of the viewport */
+}
+
+/* Individual Slide Image */
+.slider-image {
+  width: 100vw;
+  height: 70vh;
+  object-fit: cover;
+}
+
+/* Navigation Arrows */
+.slider-icons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  transform: translateY(-50%);
+}
+
+.icon {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.icon:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Dots for Navigation */
+.slider-dots {
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  gap: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active, .dot:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .slider {
+    height: 50vh;
   }
 
-  .icons{
-    width: fit-content;
-    display: flex;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 100px;
-    gap: 10px;
-    margin: auto;
-
-    .icon{
-      width: 50px;
-      height: 50px;
-      border: 1px solid #999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
+  .slider-image {
+    height: 50vh;
   }
 }
+
 
 //products CSS
 .products{
