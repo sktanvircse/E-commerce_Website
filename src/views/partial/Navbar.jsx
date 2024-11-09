@@ -1,76 +1,65 @@
-import React, { useState , useEffect } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import { Link } from "react-router-dom";
 import Cart from "../../components/pageComponent/Cart/Cart";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [data, setData] = useState(null);
-  
+  const [cartItems, setCartItems] = useState(0); // Dynamic cart count
+
   return (
-    <div className="navbar">
-      <div className="wrapper">
-        <div className="left">
-          <div className="center">
-            <Link className="link" to="/home">
+    <nav className="navbar">
+      <div className="navbar-wrapper w-100 mx-10">
+        <div className="navbar-left">
+          <div className="logo">
+            <Link to="/home" className="logo-link">
               TanvirShop
             </Link>
           </div>
-
-          <div className="item">
-            <Link className="link" to="/products/1">
+          <div className="navbar-items">
+            <Link className="navbar-item" to="/products/1">
               Women
             </Link>
-          </div>
-          <div className="item">
-            <Link className="link" to="/products/2">
+            <Link className="navbar-item" to="/products/2">
               Men
             </Link>
-          </div>
-          <div className="item">
-            <Link className="link" to="/products/3">
+            <Link className="navbar-item" to="/products/3">
               Children
             </Link>
           </div>
         </div>
 
-        <div className="right">
-          <div className="item">
-            <Link className="link" to="/home">
+        <div className="navbar-right">
+          <div className="navbar-items">
+            <Link className="navbar-item" to="/home">
               Homepage
             </Link>
-          </div>
-          <div className="item">
-            <Link className="link" to="/home">
+            <Link className="navbar-item" to="/home">
               About
             </Link>
-          </div>
-          <div className="item">
-            <Link className="link" to="/home">
+            <Link className="navbar-item" to="/home">
               Contact
             </Link>
-          </div>
-          <div className="item">
-            <Link className="link" to="/home">
+            <Link className="navbar-item" to="/home">
               Stores
             </Link>
           </div>
-          <div className="icons">
-            <SearchIcon />
-            <PersonOutlineOutlinedIcon />
-            <FavoriteBorderOutlinedIcon />
-            <div className="cartIcon" onClick={() => setOpen(!open)}>
-              <ShoppingCartOutlinedIcon />
-              <span>0</span>
+          <div className="navbar-icons">
+            <SearchIcon className="icon" />
+            <PersonOutlineOutlinedIcon className="icon" />
+            <FavoriteBorderOutlinedIcon className="icon" />
+            <div className="cart-icon" onClick={() => setOpen(!open)}>
+              <ShoppingCartOutlinedIcon className="icon" />
+              {cartItems > 0 && <span className="cart-count">{cartItems}</span>}
             </div>
           </div>
         </div>
       </div>
       {open && <Cart />}
-    </div>
+    </nav>
   );
 };
 
