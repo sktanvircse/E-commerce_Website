@@ -359,54 +359,38 @@
 }
 
 //Footer CSS
-.footer{
-  margin: 100px 200px 20px 200px;
-  .top{
-      display: flex;
-      gap: 50px;
-      .item{
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          text-align: justify;
-          font-size: 14px;
-          h1{
-              font-size: 18px;
-              font-weight: 500;
-              color: #555;
-          }
-          span{
-              color: gray;
-          }
-      }
-  }
-  .bottom{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 50px;
-      .left{
-          display: flex;
-          align-items: center;
-          .logo{
-              color: #2879fe;
-              font-weight: bold;
-              font-size: 24px;
-          }
-          .copyright{
-              margin-left: 20px;
-              font-size: 12px;
-              color: gray;
-          }
-      }
-      .right{
-          img{
-              height: 50px;
-          }
-      }
-  }
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
+
+.footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
 
 //Navbar CSS
 /* Main Navbar Style */

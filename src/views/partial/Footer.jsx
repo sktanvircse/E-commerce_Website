@@ -1,55 +1,16 @@
-import React from "react";
+import React from 'react';
+
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="top">
-        <div className="item">
-          <h1>Categories</h1>
-          <span>Women</span>
-          <span>Men</span>
-          <span>Shoes</span>
-          <span>Accessories</span>
-          <span>New Arrivals</span>
-        </div>
-        <div className="item">
-          <h1>Links</h1>
-          <span>FAQ</span>
-          <span>Pages</span>
-          <span>Stores</span>
-          <span>Compare</span>
-          <span>Cookies</span>
-        </div>
-        <div className="item">
-          <h1>About</h1>
-          <span>
-            Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit
-            amet conse ctetur adipisicing elit, seddo eiusmod tempor incididunt
-            ut labore etdolore.
-          </span>
-        </div>
-        <div className="item">
-          <h1>Contact</h1>
-          <span>
-            Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit
-            amet conse ctetur adipisicing elit, seddo eiusmod tempor incididunt
-            ut labore etdolore.
-          </span>
-        </div>
+    <footer className="footer">
+      <div className="footer-content">
+        <p style={{color:"#f9f9f9"}}>&copy; 2024 Sheikh Tanvir. All Rights Reserved.</p>
+        <ul className="footer-links">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
       </div>
-      <div className="bottom">
-        <div className="left">
-          <span className="logo">TanvirShop</span>
-          <span className="copyright">
-            © Copyright 2024. All Rights Reserved TanvirShop
-          </span>
-        </div>
-        <div className="right">
-          <img src="/images/payment.png" alt="" />
-        </div>
-      </div>
-    </div>
+    </footer>
   );
 };
 
