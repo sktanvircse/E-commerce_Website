@@ -6,6 +6,7 @@ import Layout from "./configs/Layout";
 const Login = lazy(() => import("./views/auth/Login"));
 const Home = lazy(() => import("./views/pages/index"));
 const Products = lazy(() => import("./views/pages/Products/Products"));
+const Items = lazy(() => import("./views/pages/Items/Items"));
 
 const AppRouter = () => {
     return (
@@ -16,8 +17,12 @@ const AppRouter = () => {
                     <Route path="/login" element={<Login />} />
                     <Route element={<Layout />}>
                         <Route path="/home" element={<Home />} />
+                        
                         <Route path="/products" element={<Products />} />
                         <Route path="/products/:id" element={<Products />} />
+
+                        <Route path="/items" element={<Items />} />
+                        <Route path="/items/:id" element={<Items />} />
                     </Route>
                 </Routes>
             </Suspense>
